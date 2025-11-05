@@ -60,3 +60,77 @@ html, body, #root {
   background: var(--vidson-orange) !important;
   color: var(--vidson-white) !important;
 }
+
+/* Service images: controlled size and cover */
+.service-img {
+  width: 100%;
+  max-width: 540px;       /* limits how wide the image grows on large screens */
+  max-height: 340px;      /* keeps aspect ratio in check */
+  object-fit: cover;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Slight spacing tweak so text reads larger & clearer */
+.services h3 {
+  font-size: 1.6rem;
+}
+.services p,
+.services .fs-5 {
+  font-size: 1.05rem;
+}
+
+/* btn-vidson (brand button) - keep consistent */
+.btn-vidson {
+  background: #FF7A00;
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: 600;
+}
+.btn-vidson:hover,
+.btn-vidson:focus {
+  background: #4A4A4A;
+  color: #FF7A00;
+}
+
+/* Abstract separator style (small, subtle, brand-tinted) */
+.abstract-sep {
+  height: 64px;                      /* small height so it doesn't take much vertical space */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 0.9;
+  filter: saturate(0.95);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* If you created two abstract images, alternate them using nth-of-type in markup, but simple approach below: */
+.abstract-sep {
+  background-image: url('/images/abstract-1.png'); /* default abstract image */
+}
+
+/* override for every other separator if you want variety — optional */
+.abstract-sep:nth-of-type(2n) {
+  background-image: url('/images/abstract-2.png');
+}
+
+/* Hover effect on images */
+.service-img:hover {
+  transform: scale(1.02);
+  transition: transform 0.35s ease;
+}
+
+/* Make sure rows stack nicely on mobile (Bootstrap handles this but ensure spacing) */
+@media (max-width: 767.98px) {
+  .service-img {
+    max-width: 100%;
+    max-height: 320px;
+  }
+  .services p, .services .fs-5 {
+    font-size: 1rem;
+  }
+}
