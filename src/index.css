@@ -1,0 +1,62 @@
+html {
+  scroll-behavior: smooth;
+}
+
+:root{
+  --vidson-orange: #FF7A00;
+  --vidson-darkgrey: #4A4A4A;
+  --vidson-lightgrey: #F5F6F8;
+  --vidson-white: #FFFFFF;
+}
+
+/* Basic reset so centering works */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: var(--vidson-lightgrey);
+  color: var(--vidson-darkgrey);
+}
+
+.card {
+  transition: all 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+
+/* subtle card */
+.card-custom {
+  background: var(--vidson-white);
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+}
+
+/* Keep Bootstrap .btn base but style our variant */
+.btn-vidson {
+  background: var(--vidson-orange);
+  color: var(--vidson-white);
+  border: none;
+  font-weight: 600;
+  padding: 0.5rem 1.25rem;
+  border-radius: 0.5rem;
+}
+
+/* Hover/focus - use slightly darker orange or switch to darkgrey per brand */
+.btn-vidson:hover,
+.btn-vidson:focus {
+  background: var(--vidson-darkgrey);
+  color: var(--vidson-orange);
+  box-shadow: none;
+}
+
+/* If Bootstrap specificity is still winning, this ensures override */
+.btn-vidson.btn,
+.btn.btn-vidson {
+  background: var(--vidson-orange) !important;
+  color: var(--vidson-white) !important;
+}
