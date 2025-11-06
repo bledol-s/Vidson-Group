@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import logo from "../assets/vidson-logo.png";
+import { Link } from 'react-router-dom';
 
 function Navbar() {
   const [scrolled, setScrolled] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -13,6 +15,15 @@ function Navbar() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const handleScrollTo = (id) => {
+    // Always navigate to home first
+    navigate("/");
+    setTimeout(() => {
+      const section = document.getElementById(id);
+      if (section) section.scrollIntoView({ behavior: "smooth" });
+    }, 300); // wait for Home to load
+  };
 
   return (
     <nav
@@ -25,17 +36,19 @@ function Navbar() {
       }}
     >
       <div className="container">
-        <a className="navbar-brand fw-bold text-dark d-flex align-items-center" href="#">
+        <a className="navbar-brand d-flex align-items-center" href="#home">
           <img
             src={logo}
             alt="Vidson Group Logo"
             style={{
-              height: scrolled ? "48px" : "80px",
+              height: scrolled ? "68px" : "120px",
               transition: "height 0.3s ease-in-out",
+              cursor: "pointer",
             }}
           />
         </a>
 
+        {/* Toggle Button */}
         <button
           className="navbar-toggler"
           type="button"
@@ -48,46 +61,45 @@ function Navbar() {
           <span className="navbar-toggler-icon"></span>
         </button>
 
+        {/* Nav Links */}
         <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
           <ul className="navbar-nav align-items-center">
             <li className="nav-item mx-2">
-              <a className="nav-link active" href="#">Home</a>
-            </li>
-            <li className="nav-item mx-2">
-              <a className="nav-link" href="#about">About</a>
+              <a className="nav-link active" href="#home">Home</a>
             </li>
 
-            {/* Services with dropdown */}
+            {/* Dropdown */}
             <li className="nav-item dropdown mx-2">
-              <a
-                className="nav-link dropdown-toggle"
-                href="#services"
+              <button
+                className="nav-link dropdown-toggle btn btn-link"
                 id="navbarDropdown"
-                role="button"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
                 Services
-              </a>
+              </button>
               <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a className="dropdown-item" href="#subsidiaries">Subsidiaries</a></li>
-                <li><a className="dropdown-item" href="#engineering">Engineering</a></li>
-                <li><a className="dropdown-item" href="#construction">Construction</a></li>
+                <li><Link className="dropdown-item" to="/aluminium">Vidson Aluminium</Link></li>
+                <li><Link className="dropdown-item" to="solar">Vidson Solar</Link></li>
+                <li><Link className="dropdown-item" to="realestate">Vidson Real Estate</Link></li>
+                <li><Link className="dropdown-item" to="academy">Vidson Academy</Link></li>
               </ul>
             </li>
-
             <li className="nav-item mx-2">
-              <a className="nav-link" href="#projects">Projects</a>
+              <Link className="nav-link btn btn-link" to="about">About</Link>
+            </li>
+            <li className="nav-item mx-2">
+              <Link className="nav-link btn btn-link" to="projects">Projects</Link>
+            </li>
+            <li className="nav-item mx-2">
+              <Link className="nav-link btn btn-link" to="news">News</Link>
             </li>
 
-            <li className="nav-item mx-2">
-              <a className="nav-link" href="#news">News</a>
-            </li>
-
+            {/* CTA Button */}
             <li className="nav-item ms-3">
-              <a
+              <button
                 className="btn"
-                href="#contact"
+                onClick={() => handleScrollTo("contact")}
                 style={{
                   backgroundColor: "#FF7A00",
                   color: "white",
@@ -97,7 +109,7 @@ function Navbar() {
                 }}
               >
                 Get in Touch
-              </a>
+              </button>
             </li>
           </ul>
         </div>

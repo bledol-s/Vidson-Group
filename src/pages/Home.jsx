@@ -1,29 +1,74 @@
+import "bootstrap/dist/css/bootstrap.min.css";
+
 function Home() {
   return (
     <>
-      <section
-        className="hero-section d-flex align-items-center text-white"
-        style={{
-          height: "90vh",
-          background: "linear-gradient(to right, #4A4A4A, #FF7A00)",
-        }}
-      >
-        <div className="container text-center">
-          <h1 className="fw-bold display-4 mb-3">
-            Building the Future with Excellence
-          </h1>
-          <p className="lead mb-4">
-            Vidson Group delivers innovation in Aluminium, Glass, and Sustainable Construction.
-          </p>
-          <a
-            href="#services"
-            className="btn btn-light px-4 py-2 fw-semibold"
-            style={{ borderRadius: "25px", color: "#FF7A00" }}
-          >
-            Learn More
-          </a>
+      <section id="home">
+      {/* ===== HERO SLIDER ===== */}
+      <div id="heroCarousel" className="carousel slide" data-bs-ride="carousel">
+        <div className="carousel-inner">
+          {/* Slide 1 */}
+          <div className="carousel-item active">
+            <img
+              src="/images/vidson-solar.jpg"
+              className="d-block w-100"
+              alt="Vidson Solar Facade"
+              style={{ height: "90vh", objectFit: "cover" }}
+            />
+            <div className="carousel-caption d-none d-md-block">
+              <h2 className="fw-bold">Building Excellence</h2>
+              <p>Innovating the future of construction and engineering</p>
+            </div>
+          </div>
+
+          {/* Slide 2 */}
+          <div className="carousel-item">
+            <img
+              src="/images/vidson-academy.jpg"
+              className="d-block w-100"
+              alt="Vidson Academy"
+              style={{ height: "90vh", objectFit: "cover" }}
+            />
+            <div className="carousel-caption d-none d-md-block">
+              <h2 className="fw-bold">Engineering Quality</h2>
+              <p>Delivering value-driven solutions across Nigeria</p>
+            </div>
+          </div>
+
+          {/* Slide 3 */}
+          <div className="carousel-item">
+            <img
+              src="/images/vidson-realestate.jpg"
+              className="d-block w-100"
+              alt="Vidson Real Estate"
+              style={{ height: "90vh", objectFit: "cover" }}
+            />
+            <div className="carousel-caption d-none d-md-block">
+              <h2 className="fw-bold">Innovation & Integrity</h2>
+              <p>Building with purpose and precision</p>
+            </div>
+          </div>
         </div>
-      </section>
+
+        {/* Controls */}
+        <button
+          className="carousel-control-prev"
+          type="button"
+          data-bs-target="#heroCarousel"
+          data-bs-slide="prev"
+        >
+          <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+        </button>
+        <button
+          className="carousel-control-next"
+          type="button"
+          data-bs-target="#heroCarousel"
+          data-bs-slide="next"
+        >
+          <span className="carousel-control-next-icon" aria-hidden="true"></span>
+        </button>
+      </div>
+    </section>
       
       <section id="services" className="py-5 bg-white">
       {/* Abstract separator */}
