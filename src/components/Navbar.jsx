@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import logo from "../assets/vidson-logo.png";
 
 function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -24,9 +25,15 @@ function Navbar() {
       }}
     >
       <div className="container">
-        <a className="navbar-brand fw-bold text-dark" href="#">
-          <span style={{ color: "#4A4A4A" }}>Vidson</span>
-          <span style={{ color: "#FF7A00" }}>Group</span>
+        <a className="navbar-brand fw-bold text-dark d-flex align-items-center" href="#">
+          <img
+            src={logo}
+            alt="Vidson Group Logo"
+            style={{
+              height: scrolled ? "48px" : "80px",
+              transition: "height 0.3s ease-in-out",
+            }}
+          />
         </a>
 
         <button
