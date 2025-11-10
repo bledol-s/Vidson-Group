@@ -14,6 +14,7 @@ import Academy from './pages/Academy';
 import Projects from './pages/Projects';
 import About from './pages/About';
 import News from './pages/News';
+import Careers from './pages/Careers';
 
 function App() {
   useEffect(() => {
@@ -32,6 +33,7 @@ function App() {
         <Route path="/projects" element={<Projects />} />
         <Route path="/about" element={<About />} />
         <Route path="/news" element={<News />} />
+        <Route path="/careers" element={<Careers />} />
       </Routes>
       <Footer />
     </Router>

@@ -99,7 +99,7 @@ html, body, #root {
 /* Abstract separator: full-width horizontal design band */
 .abstract-sep {
   width: 100%;
-  height: 80px; /* thickness of the strip (adjust to taste: 100–180px works nicely) */
+  height: 20px; /* thickness of the strip (adjust to taste: 100–180px works nicely) */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover; /* stretches to fill horizontally */
