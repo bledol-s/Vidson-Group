@@ -21,7 +21,7 @@ const About = () => {
       <section
         className="hero-section text-center text-light d-flex align-items-center justify-content-center"
         style={{
-          backgroundImage: "url('/images/about-bg.jpg')",
+          backgroundImage: "url('/images/about-vidson.jpg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           height: "85vh",

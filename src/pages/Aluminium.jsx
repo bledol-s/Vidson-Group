@@ -25,7 +25,7 @@ const Aluminium = () => {
       <section
         className="hero-section text-center text-light d-flex align-items-center justify-content-center"
         style={{
-          backgroundImage: "url('/images/vidson-aluminium.jpg')",
+          backgroundImage: "url('/images/hero/hero-aluminium2.jpg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           height: "90vh",

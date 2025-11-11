@@ -6,71 +6,85 @@ function Home() {
   return (
     <>
       <section id="home">
-      {/* ===== HERO SLIDER ===== */}
-      <div id="heroCarousel" className="carousel slide" data-bs-ride="carousel">
-        <div className="carousel-inner">
-          {/* Slide 1 */}
-          <div className="carousel-item active">
-            <img
-              src="/images/vidson-solar.jpg"
-              className="d-block w-100"
-              alt="Vidson Solar Facade"
-              style={{ height: "90vh", objectFit: "cover" }}
-            />
-            <div className="carousel-caption d-none d-md-block">
-              <h2 className="fw-bold" style={{ color: '#FF7A00' }}>Building Excellence</h2>
-              <p style={{ color: '#000000ff' }}>Innovating the future of construction and engineering</p>
+        {/* ===== HERO SLIDER ===== */}
+        <div id="heroCarousel" className="carousel slide" data-bs-ride="carousel" data-bs-interval="6000">
+          <div className="carousel-inner">
+            {/* Slide 1 - Vidson Aluminium */}
+            <div className="carousel-item active">
+              <img
+                src="/images/hero/hero-aluminium.jpg"
+                className="d-block w-100"
+                alt="Vidson Aluminium"
+                style={{ height: "100vh", objectFit: "cover" }}
+              />
+              <div className="carousel-caption d-none d-md-block">
+                <h2 className="fw-bold" style={{ color: "#FF7A00" }}>Vidson Aluminium</h2>
+                <p style={{ color: "#fff" }}>Precision. Strength. Beauty in Every Frame.</p>
+              </div>
+            </div>
+
+            {/* Slide 2 - Vidson Solar */}
+            <div className="carousel-item">
+              <img
+                src="/images/hero/hero-solar.jpg"
+                className="d-block w-100"
+                alt="Vidson Solar"
+                style={{ height: "100vh", objectFit: "cover" }}
+              />
+              <div className="carousel-caption d-none d-md-block">
+                <h2 className="fw-bold" style={{ color: "#FF7A00" }}>Vidson Solar</h2>
+                <p style={{ color: "#fff" }}>Empowering a Greener Future.</p>
+              </div>
+            </div>
+
+            {/* Slide 3 - Vidson Real Estate */}
+            <div className="carousel-item">
+              <img
+                src="/images/hero/hero-realestate.jpg"
+                className="d-block w-100"
+                alt="Vidson Real Estate"
+                style={{ height: "100vh", objectFit: "cover" }}
+              />
+              <div className="carousel-caption d-none d-md-block">
+                <h2 className="fw-bold" style={{ color: "#FF7A00" }}>Vidson Real Estate</h2>
+                <p style={{ color: "#fff" }}>Building Spaces. Creating Value.</p>
+              </div>
+            </div>
+
+            {/* Slide 4 - Vidson Academy */}
+            <div className="carousel-item">
+              <img
+                src="/images/hero/hero-academy.jpg"
+                className="d-block w-100"
+                alt="Vidson Academy"
+                style={{ height: "100vh", objectFit: "cover" }}
+              />
+              <div className="carousel-caption d-none d-md-block">
+                <h2 className="fw-bold" style={{ color: "#FF7A00" }}>Vidson Academy</h2>
+                <p style={{ color: "#fff" }}>Shaping Tomorrow’s Professionals.</p>
+              </div>
             </div>
           </div>
 
-          {/* Slide 2 */}
-          <div className="carousel-item">
-            <img
-              src="/images/vidson-academy.jpg"
-              className="d-block w-100"
-              alt="Vidson Academy"
-              style={{ height: "90vh", objectFit: "cover" }}
-            />
-            <div className="carousel-caption d-none d-md-block">
-              <h2 className="fw-bold" style={{ color: '#FF7A00' }}>Engineering Quality</h2>
-              <p style={{ color: '#000000ff' }}>Delivering value-driven solutions across Nigeria</p>
-            </div>
-          </div>
-
-          {/* Slide 3 */}
-          <div className="carousel-item">
-            <img
-              src="/images/vidson-realestate.jpg"
-              className="d-block w-100"
-              alt="Vidson Real Estate"
-              style={{ height: "90vh", objectFit: "cover" }}
-            />
-            <div className="carousel-caption d-none d-md-block">
-              <h2 className="fw-bold" style={{ color: '#FF7A00' }}>Innovation & Integrity</h2>
-              <p style={{ color: '#000000ff' }}>Building with purpose and precision</p>
-            </div>
-          </div>
+          {/* Carousel Controls */}
+          <button
+            className="carousel-control-prev"
+            type="button"
+            data-bs-target="#heroCarousel"
+            data-bs-slide="prev"
+          >
+            <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+          </button>
+          <button
+            className="carousel-control-next"
+            type="button"
+            data-bs-target="#heroCarousel"
+            data-bs-slide="next"
+          >
+            <span className="carousel-control-next-icon" aria-hidden="true"></span>
+          </button>
         </div>
-
-        {/* Controls */}
-        <button
-          className="carousel-control-prev"
-          type="button"
-          data-bs-target="#heroCarousel"
-          data-bs-slide="prev"
-        >
-          <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-        </button>
-        <button
-          className="carousel-control-next"
-          type="button"
-          data-bs-target="#heroCarousel"
-          data-bs-slide="next"
-        >
-          <span className="carousel-control-next-icon" aria-hidden="true"></span>
-        </button>
-      </div>
-    </section>
+      </section>
       
       <section id="services" className="py-3 bg-white">
       {/* Abstract separator */}
@@ -82,7 +96,7 @@ function Home() {
         <div className="row align-items-center mb-5" data-aos="fade-right" data-aos-delay="100">
           <div className="col-md-6 mb-3 mb-md-0">
             <img
-              src="/images/vidson-aluminium.jpg"
+              src="/images/sub/vidson-aluminium.jpg"
               alt="Vidson Aluminium & Glass"
               className="img-fluid rounded-4 service-img"
             />
@@ -106,7 +120,7 @@ function Home() {
         <div className="row align-items-center mb-5 flex-md-row-reverse" data-aos="fade-left" data-aos-delay="150">
           <div className="col-md-6 mb-3 mb-md-0 text-md-end">
             <img
-              src="/images/vidson-solar.jpg"
+              src="/images/sub/vidson-solar.jpg"
               alt="Vidson Solar Facades"
               className="img-fluid rounded-4 service-img"
               style={{ display: "inline-block" }}
@@ -131,7 +145,7 @@ function Home() {
         <div className="row align-items-center mb-5" data-aos="fade-right" data-aos-delay="200">
           <div className="col-md-6 mb-3 mb-md-0">
             <img
-              src="/images/vidson-realestate.jpg"
+              src="/images/sub/vidson-realestate.jpg"
               alt="Vidson Real Estate"
               className="img-fluid rounded-4 service-img"
             />
@@ -155,7 +169,7 @@ function Home() {
         <div className="row align-items-center mb-5 flex-md-row-reverse" data-aos="fade-left" data-aos-delay="250">
           <div className="col-md-6 mb-3 mb-md-0 text-md-end">
             <img
-              src="/images/vidson-academy.jpg"
+              src="/images/sub/vidson-academy.jpg"
               alt="Vidson Academy"
               className="img-fluid rounded-4 service-img"
               style={{ display: "inline-block" }}
@@ -271,37 +285,37 @@ function Home() {
       {/* Project Card */}
       {[
         {
-          img: '/images/cbn-adoekiti.jpg',
+          img: '/images/projects/cbn-adoekiti.jpg',
           title: 'Central Bank of Nigeria',
           location: 'Ado Ekiti, Nigeria',
           scope: 'Cladding and Curtain Walls'
         },
         {
-          img: '/images/british-council-ikoyi.jpg',
+          img: '/images/projects/british-council-ikoyi.jpg',
           title: 'British Council Office',
           location: 'Ikoyi, Lagos',
           scope: 'Curtain Walls, Windows & Doors'
         },
         {
-          img: '/images/gambia-airport.jpg',
+          img: '/images/projects/gambia-airport.jpg',
           title: 'Gambia International Airport',
           location: 'Banjul, Gambia',
           scope: 'Cladding, Curtain Walls, Windows & Doors'
         },
         {
-          img: '/images/mtn-office.jpg',
+          img: '/images/projects/mtn-office.jpg',
           title: 'MTN Office',
           location: 'Victoria Island, Lagos',
           scope: 'Cladding, Curtain Walls, Windows & Doors'
         },
         {
-          img: '/images/zenith-towers.jpg',
+          img: '/images/projects/zenith-towers.jpg',
           title: 'Zenith Towers',
           location: 'Victoria Island, Lagos',
           scope: 'Cladding, Curtain Walls, Windows & Doors'
         },
         {
-          img: '/images/apdc-abuja.jpg',
+          img: '/images/projects/apdc-abuja.jpg',
           title: 'Abuja Property Dev. Company',
           location: 'Abuja, Nigeria',
           scope: 'Cladding, Curtain Walls, Windows & Doors'
@@ -344,18 +358,19 @@ function Home() {
 
     {/* View More Button */}
     <div className="text-center mt-5">
-      <button
-        className="btn btn-lg"
-        style={{
-          backgroundColor: '#FF7A00',
-          color: 'white',
-          border: 'none',
-          padding: '10px 25px',
-          borderRadius: '6px'
-        }}
-      >
-        View More Projects
-      </button>
+      <Link
+            to="/projects"
+            className="btn btn-lg"
+            style={{
+              backgroundColor: '#FF7A00',
+              color: 'white',
+              border: 'none',
+              padding: '10px 25px',
+              borderRadius: '6px'
+            }}
+          >
+            View More Projects
+          </Link>
     </div>
   </div>
 </section>
@@ -377,35 +392,35 @@ function Home() {
     >
       {[
         {
-          img: '/images/news-expansion.jpg',
+          img: '/images/news/news-expansion.jpg',
           title: 'Vidson Group Expands Operations in West Africa',
           date: 'October 10, 2025',
           description:
             'Vidson Group announces a major expansion across West Africa, strengthening partnerships and delivering innovative façade systems.',
         },
         {
-          img: '/images/cbn-adoekiti.jpg',
+          img: '/images/projects/cbn-adoekiti.jpg',
           title: 'CBN Ado-Ekiti Project Successfully Completed',
           date: 'September 22, 2025',
           description:
             'Vidson Aluminium & Glass completes the Central Bank of Nigeria Ado-Ekiti facade project, setting new standards in precision and quality.',
         },
         {
-          img: '/images/news-academy.jpg',
+          img: '/images/news/news-academy.jpg',
           title: 'Vidson Academy Launches Training Program',
           date: 'August 30, 2025',
           description:
             'Vidson Academy opens a new practical training series for young professionals in curtain walling and aluminium systems.',
         },
         {
-          img: '/images/news-solar.jpg',
+          img: '/images/news/news-solar.jpg',
           title: 'Vidson Solar Introduces Energy-Efficient Panels',
           date: 'July 12, 2025',
           description:
             'The Solar division introduces a new range of panels for sustainable facade integration and renewable energy efficiency.',
         },
         {
-          img: '/images/news-realestate.jpg',
+          img: '/images/news/news-realestate.jpg',
           title: 'Vidson Lauches Solar Powered Real Estate',
           date: 'October 12, 2025',
           description:
@@ -529,25 +544,11 @@ function Home() {
           img: '/images/client1.jpg',
         },
         {
-          name: 'Engr. Samuel Adedeji',
-          position: 'Project Manager, NEPL',
+          name: 'Engr. Ladi Adedeji',
+          position: 'Project Manager, NTA',
           review:
             'Vidson Group has been a reliable partner throughout our project. Their precision in aluminium and glass works is unmatched.',
-          img: '/images/client1.jpg',
-        },
-        {
-          name: 'Mrs. Grace Okon',
-          position: 'Architect, APDC Abuja',
-          review:
-            'They deliver on time and with exceptional quality. Our office building stands out beautifully thanks to Vidson’s craftsmanship.',
           img: '/images/client2.jpg',
-        },
-        {
-          name: 'Mr. Lamin Jatta',
-          position: 'Airport Supervisor, Gambia International Airport',
-          review:
-            'Their facade and curtain wall installation was top-notch. The professionalism of the team made the entire process seamless.',
-          img: '/images/client1.jpg',
         },
       ].map((testimonial, index) => (
         <div
@@ -754,7 +755,7 @@ function Home() {
       >
         <div className="card border-0 shadow-sm h-100 p-4 text-center">
           <img
-            src="/images/reynaers.jpg"
+            src="/images/partners/reynaers.jpg"
             alt="Reynaers Aluminium"
             className="img-fluid mx-auto mb-3"
             style={{ maxHeight: "80px", objectFit: "contain" }}
@@ -784,7 +785,7 @@ function Home() {
       >
         <div className="card border-0 shadow-sm h-100 p-4 text-center">
           <img
-            src="/images/apdc.jpg"
+            src="/images/partners/apdc.jpg"
             alt="APDC"
             className="img-fluid mx-auto mb-3"
             style={{ maxHeight: "80px", objectFit: "contain" }}
