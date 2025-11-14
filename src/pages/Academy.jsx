@@ -8,12 +8,11 @@ const Academy = () => {
   }, []);
 
   const courses = [
-    {name: "Architecture & Design", img: "/images/architecture-course.jpg", desc: "Comprehensive training in architectural design and visualization using modern tools.",},
-    {name: "Project Management", img: "/images/project-management-course.jpg", desc: "Master the fundamentals of project planning, scheduling, and execution.",},
-    {name: "Aluminium Fabrication", img: "/images/aluminium-fabrication-course.jpg", desc: "Hands-on training on aluminium and glass fabrication and installation techniques.",},
-    {name: "BIM & CAD Technologies", img: "/images/bim-course.jpg", desc: "Learn how to design, model, and collaborate using BIM and CAD software like ArchiCAD and AutoCAD.",},
-    {name: "Real Estate Development", img: "/images/realestate-course.jpg", desc: "Understand the principles of property development, investment, and valuation.",},
-    {name: "Renewable Energy & Solar Systems", img: "/images/solar-course.jpg", desc: "Get skilled in solar technology and sustainable energy solutions for modern buildings.",},
+    {name: "Project Management", img: "/images/samples/management-course.jpg", desc: "Master the fundamentals of project planning, scheduling, and execution.",},
+    {name: "Aluminium Fabrication", img: "/images/samples/fabrication-course.jpg", desc: "Hands-on training on aluminium and glass fabrication and installation techniques.",},
+    {name: "BIM & CAD Technologies", img: "/images/samples/bim-course.jpg", desc: "Learn how to design, model, and collaborate using BIM and CAD software like ArchiCAD and AutoCAD.",},
+    {name: "Real Estate Development", img: "/images/samples/realestate-course.jpg", desc: "Understand the principles of property development, investment, and valuation.",},
+    {name: "Renewable Energy & Solar Systems", img: "/images/samples/solar-course.jpg", desc: "Get skilled in solar technology and sustainable energy solutions for modern buildings.",},
   ];
 
   return (
@@ -22,7 +21,7 @@ const Academy = () => {
       <section
         className="hero-section text-center text-light d-flex align-items-center justify-content-center"
         style={{
-          backgroundImage: "url('/images/vidson-academy.jpg')",
+          backgroundImage: "url('/images/hero/hero-academy2.jpg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           height: "90vh",

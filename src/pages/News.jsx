@@ -1,23 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-
-const CATEGORIES = [
-  "All News",
-  "Vidson Aluminium",
-  "Vidson Solar",
-  "Vidson Real Estate",
-  "Vidson Academy",
-];
 
 const NEWS = [
   {
     id: "innovation-award",
     title: "Vidson Aluminium Wins Innovation Award",
     category: "Vidson Aluminium",
-    date: "October 2025",
-    image: "/images/news/innovation-award.jpg",
+    date: "October 10, 2025",
+    image: "/images/news/news-expansion.jpg",
     excerpt:
       "Vidson Aluminium has been recognized for its pioneering curtain wall systems, setting new standards in facade technology across West Africa.",
     content: `The prestigious award was presented by the Nigerian Institute of Architects 
@@ -28,8 +20,8 @@ const NEWS = [
     id: "solar-launch",
     title: "Vidson Solar Launches Smart Energy Facades",
     category: "Vidson Solar",
-    date: "September 2025",
-    image: "/images/news/solar-facade-launch.jpg",
+    date: "July 12, 2025",
+    image: "/images/news/news-solar.jpg",
     excerpt:
       "A new era of solar-integrated building solutions begins as Vidson Solar unveils its next-gen solar facade panels.",
     content: `The launch event in Abuja showcased Vidson Solar’s latest photovoltaic facade panels 
@@ -37,42 +29,81 @@ const NEWS = [
     clean energy while maintaining elegant architectural finishes.`,
   },
   {
-    id: "academy-graduation",
-    title: "Vidson Academy Graduates 50 New Trainees",
+    id: "academy-launch",
+    title: "Vidson Academy Launches Training Program",
     category: "Vidson Academy",
-    date: "August 2025",
-    image: "/images/news/academy-graduation.jpg",
+    date: "August 30, 2025",
+    image: "/images/news/news-academy.jpg",
     excerpt:
-      "Vidson Academy continues to empower the next generation of technical experts in fabrication, glazing, and project management.",
-    content: `The 6-month program covered hands-on training in aluminium systems, curtain wall
-    assembly, and safety practices. Graduates have already been absorbed into Vidson Group’s
-    ongoing projects nationwide.`,
+      "Vidson Academy lauches an new course and continues to empower the next generation of technical experts in fabrication, glazing, and project management.",
+    content: `The 6-month program will cover hands-on training in aluminium systems, curtain wall
+    assembly, and safety practices. Graduates whom perform well will be absorbed into Vidson Group’s ongoing projects nationwide.`,
   },
   {
     id: "estate-projects",
     title: "Vidson Real Estate Expands Residential Projects",
     category: "Vidson Real Estate",
-    date: "July 2025",
-    image: "/images/news/realestate-expansion.jpg",
+    date: "October 12, 2025",
+    image: "/images/news/news-realestate.jpg",
     excerpt:
       "New housing developments are underway in Abuja and Lagos as Vidson Real Estate continues to redefine modern living.",
     content: `The expansion phase will introduce smart home systems, solar energy integration,
     and community-driven designs — setting a new standard for sustainable urban housing.`,
   },
+  {
+    id: "aluminium-projects",
+    title: 'CBN Ado-Ekiti Project Successfully Completed',
+    category: "Vidson Aluminium",
+    date: 'September 22, 2025',
+    img: '/images/projects/cbn-adoekiti.jpg',
+    excerpt:
+      "Vidson Aluminium & Glass completes the Central Bank of Nigeria Ado-Ekiti facade project, setting new standards in precision and quality.",
+    content: `The CBN Project at Ado-Ekiti has been successfully completed with outstanding delivery in Windows, Doors, Cladding, and Curtain Walls.`,
+  },
 ];
 
-const News = () => {
+const CATEGORIES = [
+  "All News",
+  "Vidson Aluminium",
+  "Vidson Solar",
+  "Vidson Real Estate",
+  "Vidson Academy",
+];
+
+function News() {
   const [activeCategory, setActiveCategory] = useState("All News");
-  const [selectedNews, setSelectedNews] = useState(null);
+  const [selectedNews, setSelectedNews] = useState(null); // news object for modal
+  const carouselRef = useRef(null);
 
   useEffect(() => {
     AOS.init({ duration: 800, once: true });
   }, []);
 
-  const filteredNews =
-    activeCategory === "All News"
-      ? NEWS
-      : NEWS.filter((n) => n.category === activeCategory);
+  const filteredNews = NEWS.filter((p) =>
+    activeCategory === "All News" ? true : p.category === activeCategory
+  );
+
+  // modal controls
+  const openNews = (project) => {
+    setSelectedNews(project);
+    // reset scroll of carousel after render
+    setTimeout(() => {
+      if (carouselRef.current) carouselRef.current.scrollLeft = 0;
+    }, 50);
+    // prevent body scroll
+    document.body.style.overflow = "hidden";
+  };
+  const closeModal = () => {
+    setSelectedNews(null);
+    document.body.style.overflow = "auto";
+  };
+
+  const scrollCarousel = (dir = "next") => {
+    if (!carouselRef.current) return;
+    const width = carouselRef.current.clientWidth;
+    if (dir === "next") carouselRef.current.scrollBy({ left: width, behavior: "smooth" });
+    else carouselRef.current.scrollBy({ left: -width, behavior: "smooth" });
+  };
 
   return (
     <div className="news-page">
@@ -84,17 +115,18 @@ const News = () => {
           backgroundSize: "cover",
           backgroundPosition: "center",
           height: "60vh",
+          position: "relative",
         }}
       >
         <div
           className="overlay position-absolute top-0 start-0 w-100 h-100"
           style={{ backgroundColor: "rgba(0,0,0,0.5)" }}
         ></div>
-        <div className="container position-relative text-center">
-          <h1 className="display-5 fw-bold">Vidson News</h1>
-          <p className="lead">Updates, Innovations, and Insights from Our Group</p>
-        </div>
-      </section>
+        <div className="container position-relative text-center" style={{ zIndex: 2 }}>
+           <h1 className="display-5 fw-bold">Vidson News</h1>
+           <p className="lead">Updates, Innovations, and Insights from Our Group</p>
+         </div>
+       </section>
 
       {/* Categories */}
       <section className="py-4 bg-white">

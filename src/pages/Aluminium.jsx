@@ -8,15 +8,15 @@ const Aluminium = () => {
   }, []);
 
   const products = [
-    { name: "Windows", img: "/images/windows.jpg", desc: "High-quality aluminium windows for modern and durable finishes." },
-    { name: "Curtain Wall", img: "/images/curtainwall.jpg", desc: "Elegant glass curtain walls that enhance building aesthetics." },
-    { name: "Partitioning", img: "/images/partition.jpg", desc: "Custom aluminium partitions for offices and interiors." },
-    { name: "Cladding", img: "/images/cladding.jpg", desc: "Durable aluminium cladding for both exterior and interior designs." },
-    { name: "Cubicles", img: "/images/cubicle.jpg", desc: "Strong and stylish glass cubicles for bathrooms and offices." },
-    { name: "Doors", img: "/images/doors.jpg", desc: "Beautiful aluminium doors designed for safety and style." },
-    { name: "Handrails", img: "/images/handrails.jpg", desc: "Modern aluminium and glass handrails for staircases and balconies." },
-    { name: "Skylight", img: "/images/skylight.jpg", desc: "Natural light systems with aluminium skylight structures." },
-    { name: "Facades", img: "/images/facades.jpg", desc: "Architectural aluminium facades for commercial and residential projects." },
+    { name: "Windows", img: "/images/samples/windows.jpg", desc: "High-quality aluminium windows for modern and durable finishes." },
+    { name: "Curtain Wall", img: "/images/samples/curtainwall.jpg", desc: "Elegant glass curtain walls that enhance building aesthetics." },
+    { name: "Partitioning", img: "/images/samples/partition.jpg", desc: "Custom aluminium partitions for offices and interiors." },
+    { name: "Cladding", img: "/images/samples/cladding.jpg", desc: "Durable aluminium cladding for both exterior and interior designs." },
+    { name: "Cubicles", img: "/images/samples/cubicle.jpg", desc: "Strong and stylish glass cubicles for bathrooms and offices." },
+    { name: "Doors", img: "/images/samples/doors.jpg", desc: "Beautiful aluminium doors designed for safety and style." },
+    { name: "Handrails", img: "/images/samples/handrails.jpg", desc: "Modern aluminium and glass handrails for staircases and balconies." },
+    { name: "Skylight", img: "/images/samples/skylight.jpg", desc: "Natural light systems with aluminium skylight structures." },
+    { name: "Facades", img: "/images/samples/facades.jpg", desc: "Architectural aluminium facades for commercial and residential projects." },
   ];
 
   return (

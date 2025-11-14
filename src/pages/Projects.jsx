@@ -5,7 +5,7 @@ import "aos/dist/aos.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const PROJECTS = [
-  // start with the projects you already listed on the homepage
+
   {
     id: "cbn-adoekiti",
     title: "Central Bank of Nigeria",
@@ -13,9 +13,9 @@ const PROJECTS = [
     scope: "Cladding and Curtain Walls",
     category: "Vidson Aluminium",
     images: [
-      "/images/cbn-adoekiti-1.jpg",
-      "/images/cbn-adoekiti-2.jpg",
-      "/images/cbn-adoekiti-3.jpg",
+      "/images/projects/cbn-adoekiti.jpg",
+      "/images/projects/cbn-adoekiti.jpg",
+      "/images/projects/cbn-adoekiti.jpg",
     ],
     description:
       "Full facade cladding and curtain wall installation for the Central Bank of Nigeria Ado-Ekiti branch. Delivered with precision and local fabrication from our Lagos facility.",
@@ -27,8 +27,8 @@ const PROJECTS = [
     scope: "Curtain Walls, Windows & Doors",
     category: "Vidson Aluminium",
     images: [
-      "/images/british-council-ikoyi-1.jpg",
-      "/images/british-council-ikoyi-2.jpg",
+      "/images/projects/british-council-ikoyi.jpg",
+      "/images/projects/british-council-ikoyi.jpg",
     ],
     description:
       "Curtain wall and glazing works for the British Council. Emphasis on acoustic performance and high-precision glazing.",
@@ -40,9 +40,9 @@ const PROJECTS = [
     scope: "Cladding, Curtain Walls, Windows & Doors",
     category: "Vidson Aluminium",
     images: [
-      "/images/gambia-airport-1.jpg",
-      "/images/gambia-airport-2.jpg",
-      "/images/gambia-airport-3.jpg",
+      "/images/projects/gambia-airport.jpg",
+      "/images/projects/gambia-airport.jpg",
+      "/images/projects/gambia-airport.jpg",
     ],
     description:
       "Large-scale facade and glazing works for the new terminal. Project executed across borders with tight coordination and quality control.",
@@ -53,7 +53,10 @@ const PROJECTS = [
     location: "Benin, Nigeria",
     scope: "Cladding, Curtain Walls, Windows & Doors",
     category: "Vidson Aluminium",
-    images: ["/images/nepl-benin-1.jpg", "/images/nepl-benin-2.jpg"],
+    images: [
+      "/images/projects/nepl-benin.jpg", 
+      "/images/projects/nepl-benin.jpg",
+    ],
     description:
       "Facade and window installations for NEPL corporate headquarters. Focus on durability and aesthetic appeal.",
   },
@@ -63,7 +66,10 @@ const PROJECTS = [
     location: "Victoria Island, Lagos",
     scope: "Cladding, Curtain Walls, Windows & Doors",
     category: "Vidson Aluminium",
-    images: ["/images/zenith-towers-1.jpg", "/images/zenith-towers-2.jpg"],
+    images: [
+      "/images/projects/zenith-towers.jpg", 
+      "/images/projects/zenith-towers.jpg",
+    ],
     description:
       "High-profile tower facade package including cladding, glazing, and balustrades.",
   },
@@ -73,7 +79,10 @@ const PROJECTS = [
     location: "Abuja, Nigeria",
     scope: "Cladding, Curtain Walls, Windows & Doors",
     category: "Vidson Aluminium",
-    images: ["/images/apdc-abuja-1.jpg", "/images/apdc-abuja-2.jpg"],
+    images: [
+      "/images/projects/apdc-abuja.jpg", 
+      "/images/projects/apdc-abuja.jpg",
+    ],
     description:
       "Multiple facade and glazing scopes across the APDC campus; high quality finish and local coordination.",
   },
@@ -85,7 +94,10 @@ const PROJECTS = [
     location: "Lagos, Nigeria",
     scope: "Solar facade & PV integration",
     category: "Vidson Solar",
-    images: ["/images/solar-microgrid-1.jpg", "/images/solar-microgrid-2.jpg"],
+    images: [
+      "/images/projects/solar-microgrid.jpg", 
+      "/images/projects/solar-microgrid.jpg",
+    ],
     description:
       "Pilot integration of solar facades and rooftop PV to reduce building energy draw and provide resilient power.",
   },
@@ -96,7 +108,10 @@ const PROJECTS = [
     location: "Abuja, Nigeria",
     scope: "Residential Development",
     category: "Vidson Real Estate",
-    images: ["/images/estate-zen-1.jpg", "/images/estate-zen-2.jpg"],
+    images: [
+      "/images/projects/estate-zen.jpg", 
+      "/images/projects/estate-zen.jpg",
+    ],
     description:
       "Master-planned residential development with mixed housing and sustainable infrastructure.",
   },
@@ -107,7 +122,10 @@ const PROJECTS = [
     location: "Lagos, Nigeria",
     scope: "Hands-on training",
     category: "Vidson Academy",
-    images: ["/images/academy-workshop-1.jpg"],
+    images: [
+      "/images/projects/academy-workshop.jpg",
+      "/images/projects/academy-workshop.jpg",
+    ],
     description:
       "Practical training sessions delivered to early-career fabricators and installers at Vidson Academy.",
   },

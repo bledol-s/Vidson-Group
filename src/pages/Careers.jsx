@@ -91,9 +91,7 @@ const Careers = () => {
           There are currently no open positions available.
         </p>
         <p className="text-muted fs-5">
-          However, we’re always on the lookout for passionate individuals who want 
-          to make an impact. You can send us your CV and we’ll reach out when a 
-          suitable role becomes available.
+          Subcribe to our news letter to be the first to know when there will be an open position.
         </p>
         <button
           className="btn btn-lg mt-3"
@@ -110,10 +108,53 @@ const Careers = () => {
         >
           Send Your CV
         </button>
+
+        <div
+      className="newsletter-box mt-5 text-center p-5"
+      data-aos="fade-up"
+      style={{
+        background: 'linear-gradient(90deg, #FF7A00 0%, #4A4A4A 100%)',
+        borderRadius: '12px',
+        color: 'white',
+      }}
+    >
+      <h4 className="fw-bold mb-3">Stay Updated</h4>
+      <p className="mb-4" style={{ fontSize: '15px' }}>
+        Subscribe to our newsletter for updates and insights from Vidson Group.
+      </p>
+      <form
+        className="d-flex justify-content-center align-items-center gap-2 flex-wrap"
+        onSubmit={(e) => e.preventDefault()}
+      >
+        <input
+          type="email"
+          placeholder="Enter your email"
+          className="form-control"
+          style={{
+            width: '280px',
+            borderRadius: '25px',
+            padding: '10px 15px',
+            border: 'none',
+          }}
+        />
+        <button
+          className="btn"
+          style={{
+            backgroundColor: 'white',
+            color: '#FF7A00',
+            borderRadius: '25px',
+            fontWeight: 'bold',
+            padding: '10px 25px',
+          }}
+        >
+          Subscribe
+        </button>
+      </form>
+    </div>
       </section>
 
       {/* Join the Team */}
-      <section className="py-5 bg-dark text-light text-center" data-aos="fade-up">
+      <section className="py-5 bg-'#4A4A4A' text-light text-center" data-aos="fade-up">
         <div className="container">
           <h2 className="fw-bold mb-3" style={{ color: "#FF7A00" }}>
             Be Part of Our Story

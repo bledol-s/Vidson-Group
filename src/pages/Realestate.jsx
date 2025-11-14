@@ -8,12 +8,12 @@ const RealEstate = () => {
   }, []);
 
   const properties = [
-    { name: "Luxury Apartments", img: "/images/apartments.jpg", desc: "Modern residential apartments designed for comfort and elegance." },
-    { name: "Smart Homes", img: "/images/smarthomes.jpg", desc: "Technology-driven homes that combine convenience, safety, and energy efficiency." },
-    { name: "Commercial Buildings", img: "/images/commercial.jpg", desc: "High-standard commercial developments that redefine business environments." },
-    { name: "Estate Development", img: "/images/estate.jpg", desc: "Planned and serviced estates with exceptional infrastructure and amenities." },
-    { name: "Facility Management", img: "/images/facility.jpg", desc: "Professional facility management services for residential and commercial properties." },
-    { name: "Investment Projects", img: "/images/investment.jpg", desc: "Lucrative real estate investment opportunities for local and international clients." },
+    { name: "Luxury Apartments", img: "/images/samples/apartments.jpg", desc: "Modern residential apartments designed for comfort and elegance." },
+    { name: "Smart Homes", img: "/images/samples/smarthomes.jpg", desc: "Technology-driven homes that combine convenience, safety, and energy efficiency." },
+    { name: "Commercial Buildings", img: "/images/samples/commercial.jpg", desc: "High-standard commercial developments that redefine business environments." },
+    { name: "Estate Development", img: "/images/samples/estate.jpg", desc: "Planned and serviced estates with exceptional infrastructure and amenities." },
+    { name: "Facility Management", img: "/images/samples/facility.jpg", desc: "Professional facility management services for residential and commercial properties." },
+    { name: "Investment Projects", img: "/images/samples/investment.jpg", desc: "Lucrative real estate investment opportunities for local and international clients." },
   ];
 
   return (
@@ -22,7 +22,7 @@ const RealEstate = () => {
       <section
         className="hero-section text-center text-light d-flex align-items-center justify-content-center"
         style={{
-          backgroundImage: "url('/images/vidson-realestate.jpg')",
+          backgroundImage: "url('/images/hero/hero-realestate2.jpg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           height: "90vh",

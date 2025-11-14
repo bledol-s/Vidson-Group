@@ -393,10 +393,10 @@ function Home() {
       {[
         {
           img: '/images/news/news-expansion.jpg',
-          title: 'Vidson Group Expands Operations in West Africa',
+          title: 'Vidson Aluminium Wins Innovation Award',
           date: 'October 10, 2025',
           description:
-            'Vidson Group announces a major expansion across West Africa, strengthening partnerships and delivering innovative façade systems.',
+            'Vidson Aluminium has been recognized for its pioneering curtain wall systems, setting new standards in facade technology across West Africa.',
         },
         {
           img: '/images/projects/cbn-adoekiti.jpg',
@@ -410,21 +410,21 @@ function Home() {
           title: 'Vidson Academy Launches Training Program',
           date: 'August 30, 2025',
           description:
-            'Vidson Academy opens a new practical training series for young professionals in curtain walling and aluminium systems.',
+            'Vidson Academy lauches an new course and continues to empower the next generation of technical experts in fabrication, glazing, and project management.',
         },
         {
           img: '/images/news/news-solar.jpg',
-          title: 'Vidson Solar Introduces Energy-Efficient Panels',
+          title: 'Vidson Solar Launches Smart Energy Facades',
           date: 'July 12, 2025',
           description:
-            'The Solar division introduces a new range of panels for sustainable facade integration and renewable energy efficiency.',
+            'A new era of solar-integrated building solutions begins as Vidson Solar unveils its next-gen solar facade panels.',
         },
         {
           img: '/images/news/news-realestate.jpg',
           title: 'Vidson Lauches Solar Powered Real Estate',
           date: 'October 12, 2025',
           description:
-            'The Solar division introduces a new real estate powered by powered by solar, all the facades, windows, doors and facade are generating energy for each unit of a home.',
+            'New housing developments are underway in Abuja and Lagos as Vidson Real Estate continues to redefine modern living.',
         },
       ].map((news, index) => (
         <div

@@ -8,15 +8,15 @@ const Solar = () => {
   }, []);
 
   const products = [
-    { name: "Solar Panels", img: "/images/solar-panels.jpg", desc: "High-efficiency monocrystalline and polycrystalline solar panels built for long-term performance." },
-    { name: "Inverters", img: "/images/inverter.jpg", desc: "Reliable inverters that convert DC to AC efficiently for both residential and industrial use." },
-    { name: "Solar Batteries", img: "/images/battery.jpg", desc: "Durable and high-capacity batteries that ensure constant power supply and energy storage." },
-    { name: "Charge Controllers", img: "/images/charge-controller.jpg", desc: "Smart controllers that regulate energy flow and prevent battery overcharging." },
-    { name: "Solar Street Lights", img: "/images/solar-streetlight.jpg", desc: "Energy-saving streetlights designed for durability and bright illumination." },
-    { name: "Solar Water Heaters", img: "/images/solar-heater.jpg", desc: "Eco-friendly water heating systems that harness solar power efficiently." },
-    { name: "Off-Grid Systems", img: "/images/off-grid.jpg", desc: "Independent solar power systems ideal for remote areas and full autonomy." },
-    { name: "Hybrid Systems", img: "/images/hybrid.jpg", desc: "Smart hybrid setups that combine solar and grid systems for reliability and efficiency." },
-    { name: "Solar Accessories", img: "/images/solar-accessories.jpg", desc: "Supporting solar components like cables, mounts, and connectors for complete installations." },
+    { name: "Solar Panels", img: "/images/samples/solar-panels.jpg", desc: "High-efficiency monocrystalline and polycrystalline solar panels built for long-term performance." },
+    { name: "Inverters", img: "/images/samples/inverter.jpg", desc: "Reliable inverters that convert DC to AC efficiently for both residential and industrial use." },
+    { name: "Solar Batteries", img: "/images/samples/battery.jpg", desc: "Durable and high-capacity batteries that ensure constant power supply and energy storage." },
+    { name: "Charge Controllers", img: "/images/samples/charge-controller.jpg", desc: "Smart controllers that regulate energy flow and prevent battery overcharging." },
+    { name: "Solar Street Lights", img: "/images/samples/solar-streetlight.jpg", desc: "Energy-saving streetlights designed for durability and bright illumination." },
+    { name: "Solar Water Heaters", img: "/images/samples/solar-heater.jpg", desc: "Eco-friendly water heating systems that harness solar power efficiently." },
+    { name: "Off-Grid Systems", img: "/images/samples/off-grid.jpg", desc: "Independent solar power systems ideal for remote areas and full autonomy." },
+    { name: "Hybrid Systems", img: "/images/samples/hybrid.jpg", desc: "Smart hybrid setups that combine solar and grid systems for reliability and efficiency." },
+    { name: "Solar Accessories", img: "/images/samples/solar-accessories.jpg", desc: "Supporting solar components like cables, mounts, and connectors for complete installations." },
   ];
 
   return (
@@ -25,7 +25,7 @@ const Solar = () => {
       <section
         className="hero-section text-center text-light d-flex align-items-center justify-content-center"
         style={{
-          backgroundImage: "url('/images/vidson-solar.jpg')",
+          backgroundImage: "url('/images/hero/hero-solar2.jpg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           height: "90vh",
